@@ -237,7 +237,7 @@ class Edit:
         if rollout_fraction is None and track is 'rollout':
             raise IllegalArgument('Track "rollout" needs a rollout_fraction')
 
-        upload_result = self.service.edits().apk().uplaod(
+        upload_result = self.service.edits().apks().upload(
                 editId=self.edit['id'],
                 packageName=self.package_name,
                 media_body=apk_file

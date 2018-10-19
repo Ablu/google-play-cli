@@ -101,7 +101,7 @@ def upload_apk(api, args):
 
     edit = api.start_edit()
     edit.upload(apk_file, track, rollout_fraction)
-    commit_result = edit.commit_edit()
+    commit_result = edit.commit()
     print '(%s) Successfully uploaded apk' % commit_result['id']
 
 
